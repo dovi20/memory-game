@@ -1,3 +1,31 @@
 body{
+    margin: 10px;
     text-align: center;
+    background-color: #E3CAA5;
+}
+.table{
+    margin-right: 600px;
+    border: 2px black solid;
+    
+    
+   
+}
+
+.card{
+    color: white;
+    margin: 10px;
+    background-color: #AD8B73;
+    border: 2px black solid;
+    border-radius: 3px;
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+    
+}
+.card:hover{
+    background-color: #CEAB93;
+    color:black;
+    cursor: pointer;
+    width: 105px;
+    height: 105px;
 }
