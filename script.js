@@ -1,36 +1,26 @@
 let cards = ['A','B','C','D','E','F']
 let nArr = cards.concat(cards)
-
-function shuffle(arr) {
-    // debugger;
-    let index = arr.length 
-    let random;
-    while (index != 0) {
-      random = Math.floor(Math.random() * index);
-      index--;
-      [arr[index], arr[random]] = [
-        arr[random], arr[index]];
-      
-
-    }
-    return arr;
-  }
-
-  cards = shuffle(nArr);
-
-  console.log(cards);
-
-
 let board = document.getElementById("table-game");
+let card = document.getElementsByClassName("card");
+let newDiv;
 
-function createDiv(value){
-    
+cards = shuffle(nArr);
+
+createDiv(cards, "card ");
+click1()
+
+
+function click1() {
+    for(i=0;i<card.length;i++){
+        card[i].addEventListener('click', click) 
+    }
 }
-for(i in cards){
-    let elem = document.createElement ("div");
-    elem.innerText = cards[i];
-    board.appendChild(elem);
-    elem.className = "card"
+
+function check() {
 }
+
+
+
+
 
 
