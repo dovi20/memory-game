@@ -1,4 +1,4 @@
-let cards = ['A','B','C','D','E','F']
+let cards = ['A','B','C','D','E','F','H','I']
 let nArr = cards.concat(cards)
 let board = document.getElementById("table-game");
 let card = document.getElementsByClassName("card");
