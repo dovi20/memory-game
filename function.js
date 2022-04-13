@@ -14,9 +14,11 @@ function createDiv(arr,classN){
         newDiv.innerText = i;
         board.appendChild(newDiv)
         newDiv.className = classN + i;
+        newDiv.addEventListener('click', click) 
         
     }
 }
+
 
 function click() {
     alert()
