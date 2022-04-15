@@ -7,9 +7,6 @@ cards = shuffle(nArr);
 
 createDiv(cards, "card ");
 
-
-
-
-
+let value = document.getElementsByClassName('card')[0].innerHTML
 
 

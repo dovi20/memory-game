@@ -6,13 +6,6 @@ body{
 h1{
     color: #F4DFBA
 }
-.card:hover{
-    background-color: #EEC373;
-    color:#8E806A;
-    cursor: pointer;
-    width: 105px;
-    height: 105px;
-}
 .game {
     display: grid;
     grid-template-columns: repeat( auto-fit, 100px );
@@ -25,7 +18,7 @@ h1{
   }
   .card {
     font-size: 80px;
-    color: #CA965C;
+    color: #1b1104;
     background: #CA965C;
     display: flex;
     justify-content: center;
@@ -33,4 +26,14 @@ h1{
     border-radius: 5px;
     box-shadow: 5px 5px 0 0 #333;
     cursor: pointer;
-  }
+}
+.card:hover{
+    background-color: #EEC373;
+    color:#8E806A;
+    cursor: pointer;
+    width: 105px;
+    height: 105px;
+}
+.hidden{
+    content-visibility: hidden;
+}
