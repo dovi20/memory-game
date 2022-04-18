@@ -23,19 +23,31 @@ function createDiv(arr,classN){
 
 count = []
 let click =(e)=> {
+    let active = document.getElementsByClassName('active')
     e.target.classList.remove("hidden");
     count.push(e.target.innerText)
-    if(count.length%2==0){
-        if(count[count.length-1]!=count[count.length-2]){
-            alert('not good')
-
+    if(count.length == 2){
+        let flipDiv = document.getElementsByClassName(count[0])
+        if(count[0]!=count[1]){
+            setTimeout(()=> e.target.classList.add("hidden"),1000)
+            // setTimeout(()=> flipDiv[1].classList.add("hidden"),2000)
+            setTimeout(()=> flipDiv[0].classList.add("hidden"),1000)
             console.log(count);
-        }else{
-            console.log(count);
-            alert('good')
             count = []
-        ,1000}
+        }else{
+            for (i of flipDiv){
+                i.classList.add("active")
+            }
+            for (i of active){
+                i.onclick = noclick
+            }
+            console.log(count);
+            count = []
+        }
         
     }
 
 }  
+
+let noclick = ()=> alert()
+
