@@ -32,22 +32,24 @@ let click =(e)=> {
             setTimeout(()=> e.target.classList.add("hidden"),1000)
             setTimeout(()=> flipDiv[1].classList.add("hidden"),1000)
             setTimeout(()=> flipDiv[0].classList.add("hidden"),1000)
-            console.log(count);
             count = []
         }else{
             for (i of flipDiv){
+                i.classList.add("hidden");
                 i.classList.add("active")
+                i.classList.remove("card");
             }
             for (i of active){
                 i.onclick = noclick
             }
-            console.log(count);
-            count = []
+            count = [] 
         }
         
     }
 
 }  
 
-let noclick = ()=> alert()
+
+
+let noclick = ()=> alert('this card alredy open')
 
