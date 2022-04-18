@@ -30,7 +30,7 @@ let click =(e)=> {
         let flipDiv = document.getElementsByClassName(count[0])
         if(count[0]!=count[1]){
             setTimeout(()=> e.target.classList.add("hidden"),1000)
-            setTimeout(()=> flipDiv[1].classList.add("hidden"),2000)
+            setTimeout(()=> flipDiv[1].classList.add("hidden"),1000)
             setTimeout(()=> flipDiv[0].classList.add("hidden"),1000)
             console.log(count);
             count = []
