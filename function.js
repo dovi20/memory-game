@@ -23,20 +23,26 @@ function createDiv(arr,classN){
 
 count = []
 let click =(e)=> {
-    let active = document.getElementsByClassName('active')
-    e.target.classList.remove("hidden");
+    let active = document.getElementsByClassName('active');
+    e.target.classList.replace('hidden','active');
+    e.target.onclick = noclick
     count.push(e.target.innerText)
     if(count.length == 2){
         let flipDiv = document.getElementsByClassName(count[0])
         if(count[0]!=count[1]){
-            setTimeout(()=> e.target.classList.add("hidden"),1000)
-            setTimeout(()=> flipDiv[1].classList.add("hidden"),1000)
-            setTimeout(()=> flipDiv[0].classList.add("hidden"),1000)
+            setTimeout(()=>{
+                e.target.onclick = click
+                e.target.classList.replace('active','hidden');
+                for (i of flipDiv){
+                    i.onclick = click
+                    i.classList.replace('active','hidden');
+                }
+            },1000)
             count = []
         }else{
             for (i of flipDiv){
                 i.classList.add("hidden");
-                i.classList.add("active")
+                i.classList.add("active");
                 i.classList.remove("card");
             }
             for (i of active){
@@ -51,5 +57,8 @@ let click =(e)=> {
 
 
 
-let noclick = ()=> alert('this card alredy open')
+
+
+
+let noclick = ()=> {}
 

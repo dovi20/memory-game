@@ -16,6 +16,22 @@ h1{
     max-width: 500px;
     margin: 0 auto;
   }
+  .btn{
+    font-family: 'Roboto Mono', monospace;
+    font-size: 50px;
+    color: #1b1104;
+    background: #CA965C;
+    border-radius: 5px;
+    box-shadow: 5px 5px 0 0 #333;
+
+  }
+  .form{
+      visibility: hidden;
+  }
+  .btn-hide{
+    visibility: hidden;
+
+  }
   .card {
     font-size: 80px;
     color: #1b1104;
@@ -25,8 +41,6 @@ h1{
     align-items: center;
     border-radius: 5px;
     box-shadow: 5px 5px 0 0 #333;
-    cursor: pointer;
-
 }
 .card:hover{
     background-color: #EEC373;
@@ -36,8 +50,9 @@ h1{
     height: 105px;
 }
 .hidden{
+    cursor: pointer;
     content-visibility: hidden;
 }
 .active{
-    box-shadow: 0 0 0 0 #00FFC6;
+    cursor: default;
 }
