@@ -9,7 +9,10 @@ cards = shuffle(nArr);
 
 function createDiv(){
     for(i of cards){
-        btn.classList.add('btn-hide')
+        // btn.classList.add('btn-hide')
+        // player1.classList.add('btn-hide')
+        // player2.classList.add('btn-hide')
+        settings.classList.add('hide')
         newDiv = document.createElement ("div");
         newDiv.innerText = i;
         board.appendChild(newDiv)

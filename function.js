@@ -8,19 +8,6 @@ function shuffle(arr) {
     return arr;
 }
 // create cards on the table
-function createDiv(arr,classN){
-    for(i of arr){
-        newDiv = document.createElement ("div");
-        newDiv.innerText = i;
-        board.appendChild(newDiv)
-        newDiv.className = classN + i;
-        newDiv.onclick = click
-        newDiv.classList.add('hidden')
-        // newDiv.addEventListener('click', click) 
-        
-    }
-}
-
 count = []
 let click =(e)=> {
     let active = document.getElementsByClassName('active');
