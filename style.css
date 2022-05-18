@@ -8,40 +8,14 @@ h1{
 }
 .game {
     display: grid;
-    grid-template-columns: repeat( auto-fit, 100px );
+    grid-template-columns: repeat( 4, 100px );
     grid-auto-rows: 100px;
     grid-gap: 15px;
     justify-content: center;
     perspective: 800px;
     max-width: 500px;
     margin: 0 auto;
-  }
-  /* .game-settings{
-    display: grid;
-    grid-auto-rows: 100px;
-    grid-gap: 15px;
-    justify-content: center;
-    perspective: 800px;
-    max-width: 500px;
-    margin: 0 auto;
-  } */
-  .btn{
-    font-family: 'Roboto Mono', monospace;
-    font-size: 50px;
-    color: #1b1104;
-    background: #CA965C;
-    border-radius: 5px;
-    box-shadow: 5px 5px 0 0 #333;
-    width: 300px;
-    
-
-  }
-  .form{
-      visibility: hidden;
-  }
-  .hide{
-    visibility: hidden;
-
+    margin-top: 50px;
   }
   .card {
     font-size: 80px;
@@ -52,6 +26,7 @@ h1{
     align-items: center;
     border-radius: 5px;
     box-shadow: 5px 5px 0 0 #333;
+    cursor: pointer;
 }
 .card:hover{
     background-color: #EEC373;
@@ -61,17 +36,16 @@ h1{
     height: 105px;
 }
 .hidden{
-    cursor: pointer;
     content-visibility: hidden;
 }
-.active{
-    cursor: default;
+.no-click{
+    pointer-events: none;
+
 }
-.player-name{
-    color: #1b1104;
-    background: #CA965C;
-    border-radius: 5px;
-    box-shadow: 5px 5px 0 0 #333;
-    font-size: 30px;
+.players{
+    margin-bottom: 10px;
+}
+.active{
+    box-shadow: 5px 5px 0 0 #00FFC6;
     
 }
